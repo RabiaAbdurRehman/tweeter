@@ -1,0 +1,27 @@
+.new-tweet,form{
+    width: 100%;
+
+}
+
+
+textarea {
+    padding: 1em 0;
+    border: none;
+    border-bottom: 5px solid black;
+    outline: none;
+    background-color: transparent;
+    resize: none;
+    width: 100%;
+}
+button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    font-size: 20px;
+
+}
+.tweets-form-item {
+    display: flex;
+    justify-content: space-between;
+    font-family: Bungee, cursive;
+}
