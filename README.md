@@ -1,18 +1,33 @@
-# Tweeter Project
+#Tweeter
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a single responsive app which is tweeter's clone. User can create a short message upto 140 characters which will display on the page.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+###Project is completed using:
+- [x] HTML
+- [x] CSS
+- [x] JS
+- [x] Jquery
+- [x] AJAX
+- [x] External fonts
 
-## Getting Started
+###Functionality and characteristics
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+_Project includes:
 
-## Dependencies
+* Navigation bar
+* Profile picture with name
+* Tweet box to type
+* Two hard cored tweets(server's package)
 
-- Express
-- Node 5.10.x or above
+_functionalities:
+
+* When user type a tweet within 140 characters range, it will appear on top of page after tweet button without refreshing the page.
+* If user type more than 140 characters or empty, it will give an error and make the box red.
+* If error is corrected then page will be updated on its on.
+* If the screen is become smaller then navigation color hides and only logo appears.
+
+#Images from my TWEETER
+![Alt text](/public/images/Image%201%20of%20my%20tweet.png)
+![Alt text](/public/images/image%20for%20smaller%20screen.png)
+![Alt text](/public/images/image%20when%20I%20try%20to%20submit%20empty%20tweet.png)
+![Alt text](/public/images/tweet%20with%20error%202.png)
