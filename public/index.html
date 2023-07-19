@@ -24,8 +24,10 @@
   <script src="https://kit.fontawesome.com/15a1349dfc.js" crossorigin="anonymous"></script>
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
+  <!-- for timeago -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- App JS -->
   <script src="/scripts/composer-char-counter.js"></script>
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -56,7 +58,7 @@
   <main class="container">
     <section class="new-tweet">
       <!-- <h2>Compose Tweet</h2> -->
-      <form action="/tweets/" method="POST">
+      <form id="new-tweet-form" action="/tweets/" method="POST">
         <!-- <label for="tweet-text"><h4>What are you humming about?</h4></label> -->
         <textarea name="text" id="tweet-text" rows="1" cols="30" placeholder="What are you humming about?"></textarea>
         <!-- <p id="written"></p> -->
@@ -64,26 +66,13 @@
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
-      </form>
-      <article class="tweet">
-        <header>
-
-        <div class="intro">
-          <img width="80px" src="./images/girl.jpeg">
-          <div class="name1">Mariam</div>
+        <div class="error-messages">
+          <div id="error-messages-for-empty">you must tweet something</div>
+          <div id="error-messages-for-exceeding">You exceed the length</div>
         </div>
-        <div class="email">@MsMariam</div>
-        </header>
-        <p>Hello world</p>
-        <footer>
-          <span>10 days ago</span>
-          <div>
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </footer>
-      </article>
+      </form>
+    </section>
+    <section id="tweets-container">
     </section>
     <!-- <hr style="width:50%;text-align:left;margin-left:0"> -->
   </main>
