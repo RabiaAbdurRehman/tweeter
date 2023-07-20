@@ -2,6 +2,8 @@ article.tweet{
    border: 5px solid black;
    margin: 1em 0;
    padding: 1em;
+   word-wrap: break-word;
+   max-width: 75%;
 }
 article.tweet header, article.tweet footer{
     display: flex;

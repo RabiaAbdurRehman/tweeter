@@ -1,6 +1,7 @@
 .new-tweet,
 form {
-    width: 100%;
+    width: 86%;
+    max-width: 86%;
 
 }
 
@@ -13,6 +14,7 @@ textarea {
     background-color: transparent;
     resize: none;
     width: 100%;
+    /* white-space: pre-wrap; */
 }
 
 button {

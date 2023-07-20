@@ -42,6 +42,8 @@ $(document).ready(function () {
   };
   /** this function take an array of objects and render them to the DOM*/
   const renderTweets = function (tweets) {
+    //to empty our tweet containers before we get a new tweet.
+    $("#tweets-container").empty();
     // loops through tweets
     tweets.map((tweet) => {
       //calls createTweetElement for each tweet
