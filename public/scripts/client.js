@@ -27,9 +27,7 @@ $(document).ready(function () {
     <p>${escape(tweet.content.text)}</p>
     <footer>
       <span class="tweet-age">
-      ${timeago.format(
-        tweet.created_at + 1 * 60 * 60 * 1000 + 3 * 60 * 1000 + 42 * 1000
-      )}
+      ${timeago.format(tweet.created_at)}
         </span>
       <div>
         <i class="fa-solid fa-flag"></i>
@@ -59,27 +57,28 @@ $(document).ready(function () {
     $("#error-messages-for-empty").hide();
     $("#error-messages-for-exceeding").hide();
     let tweetContents = $(this).serialize();
-    //console.log("String  ", tweetContents);
     //To create a variable so I can use to apply my conditions.
-    let txt = $("#tweet-text").val();
+    let txt = $("#tweet-text").val().trim();
 
     if (txt.length === 0) {
       $("#error-messages-for-empty").show();
       return;
     }
-    //$("#error-messages-for-empty").hide();
     if (txt.length > 140) {
       $("#error-messages-for-exceeding").show();
       return;
     }
-    $.post("/tweets", tweetContents, function (data) {
-      //This line is to clear the form after submission.
-      $("#tweet-text").val("");
-      // this line is to reset the counter.
-      $(".counter").text(140);
-      // location.reload(true);
-      loadTweets();
-    });
+    $.post("/tweets", tweetContents)
+      .done(function (data) {
+        //This line is to clear the form after submission.
+        $("#tweet-text").val("");
+        // this line is to reset the counter.
+        $(".counter").text(140);
+        loadTweets();
+      })
+      .fail(function (error) {
+        alert("error!");
+      });
   });
   /*this function is responsible to fetch tweets by requesting
     through jquery*/
@@ -89,6 +88,9 @@ $(document).ready(function () {
       dataType: "json",
       success: function (tweet) {
         renderTweets(tweet);
+      },
+      error: function () {
+        alert("Error!");
       },
     });
   };

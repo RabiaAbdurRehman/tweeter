@@ -1,27 +1,33 @@
-article.tweet{
-   border: 5px solid black;
-   margin: 1em 0;
-   padding: 1em;
-   word-wrap: break-word;
-   max-width: 75%;
+article.tweet {
+    border: 5px solid black;
+    margin: 1em 0;
+    padding: 1em;
+    word-wrap: break-word;
+    max-width: 100%;
 }
-article.tweet header, article.tweet footer{
+
+article.tweet header,
+article.tweet footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-article.tweet header .intro{
+
+article.tweet header .intro {
     display: flex;
     align-items: center;
 }
-article.tweet p{
+
+article.tweet p {
     padding: 1em 0;
     border-bottom: 5px solid black;
 
 }
-article.tweet:hover{
+
+article.tweet:hover {
     box-shadow: 5px 5px 5px black;
 }
-article.tweet footer div i:hover{
+
+article.tweet footer div i:hover {
     color: blue;
 }
