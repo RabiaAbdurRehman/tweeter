@@ -1,0 +1,58 @@
+$textarea-background-color:transparent;
+$button-background-color:#008CBA;
+$button-color: white;
+$error-messages-div-color:#D8000C;
+$error-messages-div-background-color:#FFBABA;
+$tweets-form-item-font:Bungee, cursive;
+$button-font:20px;
+
+.new-tweet,
+form {
+    width: 100%;
+    max-width: 100%;
+
+}
+#new-tweet-form {
+ display: none;
+}
+
+textarea {
+    padding: 1em 0;
+    border: none;
+    border-bottom: 5px solid black;
+    outline: none;
+    background-color: $textarea-background-color;
+    resize: none;
+    width: 100%;
+    /* white-space: pre-wrap; */
+}
+
+button {
+    background-color:$button-background-color;
+    border: none;
+    color: $button-color;
+    font-size: $button-font;
+
+}
+
+.tweets-form-item {
+    display: flex;
+    justify-content: space-between;
+    font-family: $tweets-form-item-font;
+}
+
+.error-messages {
+    display: flex;
+    justify-content: center;
+}
+
+.error-messages div {
+    border: 1px solid;
+    padding: 15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    max-width: 460px;
+    color: $error-messages-div-color;
+    background-color: $error-messages-div-background-color;
+    background-image: url('https://i.imgur.com/GnyDvKN.png');
+}

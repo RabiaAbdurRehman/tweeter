@@ -7,6 +7,9 @@
 $(document).ready(function () {
   $("#error-messages-for-empty").hide();
   $("#error-messages-for-exceeding").hide();
+  $("#slide").on("click", function () {
+    $("#new-tweet-form").slideToggle();
+  });
   /**this function gets a tweet and create tweet elements. */
   const escape = function (str) {
     let div = document.createElement("div");

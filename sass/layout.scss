@@ -3,6 +3,11 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+ $body-color:#545149;
+ $body-background-color:#f4f1ec;
+ $body-font-size:24px;
+ $body-font-family:'Source Sans 3', sans-serif;
+ $logo-font-family:'Bungee', cursive;
 html {
   box-sizing: border-box;
 }
@@ -16,18 +21,19 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-  font-family: "Source Sans 3", sans-serif;
+  color: $body-color;
+  background-color: $body-background-color;
+  font-size:  $body-font-size;
+  font-family: $body-font-family;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 .logo {
-  font-family: "Bungee", cursive;
+  font-family: $logo-font-family;
 }
 
 .container {
@@ -36,8 +42,7 @@ body {
   width: 90%;
   margin: 4em auto;
 }
-
-#main-toggle-button {
+#main-toggle-button{
   display: none;
   position: fixed;
   right: 0;
@@ -47,8 +52,10 @@ body {
   height: 50px;
   cursor: pointer;
   outline: none;
+  // border: 3px solid #333;
   background-color: red;
-  color: white;
+  color:white;
+  // opacity: 0;
   border-radius: 50%;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
@@ -59,11 +66,13 @@ body {
   body {
     display: flex;
   }
+
   header.one {
     width: 40%;
     margin: auto 100px;
   }
-  .container {
+  .container{
     min-width: 60%;
   }
 }
+

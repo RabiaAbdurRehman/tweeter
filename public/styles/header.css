@@ -1,19 +1,19 @@
 header.one {
-    /* height: 406px; */
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #a16e10;
-    color: white;
-    padding-top: 120px;
+  /* height: 406px; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #a16e10;
+  color: white;
+  padding-top: 120px;
 }
 
 @media only screen and (min-width: 1024px) {
-    header.one {
-        margin-top: 160px;
-        margin-right: 85px;
-        margin-left: 50px;
-    }
+  header.one {
+    margin-top: 160px;
+    margin-right: 85px;
+    margin-left: 50px;
+  }
 }

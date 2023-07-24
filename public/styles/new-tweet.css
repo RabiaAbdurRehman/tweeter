@@ -1,48 +1,49 @@
 .new-tweet,
 form {
-    width: 100%;
-    max-width: 100%;
-
+  width: 100%;
+  max-width: 100%;
 }
 
+#new-tweet-form {
+  display: none;
+}
 
 textarea {
-    padding: 1em 0;
-    border: none;
-    border-bottom: 5px solid black;
-    outline: none;
-    background-color: transparent;
-    resize: none;
-    width: 100%;
-    /* white-space: pre-wrap; */
+  padding: 1em 0;
+  border: none;
+  border-bottom: 5px solid black;
+  outline: none;
+  background-color: transparent;
+  resize: none;
+  width: 100%;
+  /* white-space: pre-wrap; */
 }
 
 button {
-    background-color: #008CBA;
-    border: none;
-    color: white;
-    font-size: 20px;
-
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  font-size: 20px;
 }
 
 .tweets-form-item {
-    display: flex;
-    justify-content: space-between;
-    font-family: Bungee, cursive;
+  display: flex;
+  justify-content: space-between;
+  font-family: Bungee, cursive;
 }
 
 .error-messages {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .error-messages div {
-    border: 1px solid;
-    padding: 15px 10px 15px 50px;
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    max-width: 460px;
-    color: #D8000C;
-    background-color: #FFBABA;
-    background-image: url('https://i.imgur.com/GnyDvKN.png');
+  border: 1px solid;
+  padding: 15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  max-width: 460px;
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: url("https://i.imgur.com/GnyDvKN.png");
 }
